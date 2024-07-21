@@ -14,7 +14,7 @@ const LoginPage = () => {
     password: "",
   });
 
-  const {mutate, isPending, isError, error} = useMutation({
+  const {mutate: login, isPending, isError, error} = useMutation({
 	mutationFn: async({username, password}) => {
 		try {
 			const res = await fetch("/api/auth/login", {
@@ -40,7 +40,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mutate(formData)
+    login(formData)
   };
 
   const handleInputChange = (e) => {
