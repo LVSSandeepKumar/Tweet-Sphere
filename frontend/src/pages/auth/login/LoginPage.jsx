@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 
 import XSvg from "../../../components/svgs/XSvg.jsx";
@@ -13,6 +13,8 @@ const LoginPage = () => {
     username: "",
     password: "",
   });
+
+  const queryClient = useQueryClient();
 
   const {mutate: login, isPending, isError, error} = useMutation({
 	mutationFn: async({username, password}) => {
@@ -34,7 +36,8 @@ const LoginPage = () => {
 		}
 	},
 	onSuccess: () => {
-		toast.success("Login Successful.")
+		toast.success("Login Successful.");
+    queryClient.invalidateQueries({queryKey: ["authUser"]})
 	}
   })
 
