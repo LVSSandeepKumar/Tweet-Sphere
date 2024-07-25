@@ -1,7 +1,7 @@
 # Tweet-Sphere
 
 ## Overview
-Tweet-Sphere is a Twitter clone built using the MERN stack (MongoDB, Express, React, Node.js) and TanStack/React-Query. It aims to replicate core Twitter functionalities, providing a robust and interactive social media experience.
+Tweet-Sphere is a Twitter clone built using the MERN stack (MongoDB, Express, React, Node.js) and TanStack/React-Query. It replicates core Twitter functionalities, providing a robust and interactive social media experience.
 
 ## Table of Contents
 1. [Features](#features)
@@ -84,7 +84,7 @@ The file structure includes:
 - **README.md**: Project documentation.
 
 ## Deployment
-This project is deployed at [Tweet-Sphere on Vercel](https://tweet-sphere.onrender.com).
+This project is deployed at [Tweet-Sphere on Render](https://tweet-sphere.onrender.com).
 
 ## Key Coding Takeaways
 - **MERN Stack**: Full-stack development using MongoDB, Express, React, and Node.js.
